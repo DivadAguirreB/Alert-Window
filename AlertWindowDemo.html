@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Testing Pop Window</title>
+		<meta charset="utf-8">
+		<style>
+		* {
+			margin:0px;
+			padding:0px;
+		}
+		body {
+			text-align:center;
+			width:100%;
+			display:table;
+			background-color:#FFFEF6;
+		}
+		
+		 #display-window{
+		 	padding:10px;
+		 }
+		 
+		 #link {
+			display:table-cell;
+			vertical-align:middle;
+		 }
+		 
+		 #link a {
+		 	font-size:45px;
+		 	text-decoration: none;
+			color:#61E5FF;
+			padding:10px;
+			background-color:#F9F9F1;
+			-webkit-box-shadow: 1px 1px 1px #E8E9E1;
+			-moz-box-shadow: 1px 1px 1px #E8E9E1;
+			-o-box-shadow: 1px 1px 1px #E8E9E1;
+			box-shadow:1px 1px 1px #E8E9E1;
+		 }
+		</style>
+	</head>
+	<body>
+		<span id="link"><a href="#">Click Here</a></span>
+		<div id="display-window">
+			<h1>This is a window</h1>
+			<p>Anything can go in here!</p>
+		</div>
+	</body>
+	<script>
+		document.getElementsByTagName("body")[0].style.height = window.innerHeight + "px";
+	</script>
+	<script src="AlertWindow.js"></script>
+	<script>
+		displayWindow("link", "display-window", 500, 500);
+	</script>
+</html>
